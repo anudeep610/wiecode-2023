@@ -1,0 +1,27 @@
+.page-not-found .main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-not-found .main-container img{
+    width: 125rem;
+}
+
+.page-not-found .main-container li{
+    margin: 3rem 0;
+    font-size: 2rem;
+    list-style: none;
+    color: white;
+    background-color: black;
+    padding: 2rem 1.5rem;
+    border-radius: 5rem;
+    font-weight: 600;
+}
+
+.page-not-found .main-container li .home-btn{
+    text-decoration: none;
+    color: white;
+}
+
