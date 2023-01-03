@@ -18,6 +18,7 @@
     padding: 2rem 1.5rem;
     border-radius: 5rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .page-not-found .main-container li .home-btn{
