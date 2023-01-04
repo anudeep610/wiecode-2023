@@ -1,56 +1,62 @@
-* {
+/* $bp-xl: 125em;//2000px
+$bp-largest:75em; //1200px
+$bp-large:62.5em; //1000px
+$bp-medium:50em; //800px
+$bp-small:37.5em; //600px
+$bp-xs: 25em;//400px
+$bp-xxs:12.5em;//200px */
+
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif !important;
 }
 
-body {
-    width: 100%;
-}
-
 html {
     font-size: 50%;
 }
 
-h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 4rem;
+@media only screen and (min-width:125em){
+    html{
+        font-size: 70%;
+    }
 }
 
-h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 3rem;
+@media only screen and (max-width:75em){
+    html{
+        font-size: 50%;
+    }
 }
 
-h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 2.5rem;
+@media only screen and (max-width:62.5em){
+    html{
+        font-size: 40%;
+    }
 }
 
-h4 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.8rem;
+@media only screen and (max-width:50em){
+    html{
+        font-size: 30%;
+    }
 }
 
-h5 {
-    margin: 0;
-    padding: 0;
-    font-size: 0.8rem;
+@media only screen and (max-width:37.5em){
+    html{
+        font-size: 20%;
+    }
 }
 
-h6 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.5rem;
+@media only screen and (max-width:25em){
+    html{
+        font-size: 15%;
+    }
 }
 
-p {
-    margin: 0;
-    padding: 0;
-    font-size: 2rem;
+@media only screen and (max-width:12.5em){
+    html{
+        font-size: 5%;
+    }
 }
