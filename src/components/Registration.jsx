@@ -13,18 +13,7 @@ export default function Registration() {
                 </div>
                 <div className="line-container"></div>
                 <div className="form-box">
-                    <Box>
-                        <Title
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                            order={2}
-                        >
-                            Hey there!
-                        </Title>
-                        {/* Steps */}
-                        <Button>Submit</Button>
-                    </Box>
+                    
                 </div>
             </div>
             <Footer />
