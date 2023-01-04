@@ -1,0 +1,47 @@
+.registration .registration-main-container{
+    height:100vh;
+    padding: 8rem 5rem;
+    background-color: #1B1D33;
+    display: flex;
+    flex-direction: column;
+}
+
+.registration .registration-main-container .heading-container{
+    align-self: flex-start;
+}
+
+.registration .registration-main-container .heading-container .heading-text{
+    font-size: 12rem;
+    letter-spacing: 7rem;
+    color: rgb(45, 48, 81);
+    font-weight: 100;
+}
+
+.registration .registration-main-container .line-container{
+    height: 0.25rem;
+    width:100rem;
+    background-color: rgb(45, 48, 81);
+    transform: rotate(-320deg);
+}
+
+@media only screen and (max-width:25em){
+    .registration .registration-main-container .heading-container .heading-text{
+        font-size: 15rem;
+        letter-spacing: 6rem;
+    }
+
+    .registration .registration-main-container .line-container{
+        height: 0;
+    }
+}
+
+@media only screen and (max-width:20em){
+    .registration .registration-main-container .heading-container .heading-text{
+        font-size: 20rem;
+        letter-spacing: 4rem;
+    }
+
+    .registration .registration-main-container .line-container{
+        height: 0;
+    }
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+.footer .footer-main-container{
+    background-color: black;
+    padding: 1.5rem 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .footer-main-container .copyright-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .footer-main-container .icons-container{
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .footer-main-container .icons-container .icon{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.footer .footer-main-container .icon-logo{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.footer .footer-main-container .copyright-text{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+}
+
+@media only screen and (max-width:25em){
+    .footer .footer-main-container .icon-logo .icon{
+        font-size: 5rem;
+    }
+
+    .footer .footer-main-container .copyright-text{
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width:20em){
+    .footer .footer-main-container .icon-logo .icon{
+        font-size: 4rem;
+    }
+
+    .footer .footer-main-container .copyright-text{
+        font-size: 3rem;
+    }
+}
