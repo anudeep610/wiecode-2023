@@ -1,5 +1,5 @@
 .registration .registration-main-container{
-    height:100vh;
+    min-height:100vh;
     padding: 8rem 5rem;
     background-color: #1B1D33;
     display: flex;
@@ -24,12 +24,54 @@
     transform: rotate(-320deg);
 }
 
-.registration .registration-main-container .form-box{
+.registration .registration-main-container .form-box-container{
     align-self: center;
+    justify-self: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 3rem;
+    z-index: 1;
+    margin: auto 0;
+    width: 100%;
+}
+
+.registration .registration-main-container .form-box-container .form-box{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
+}
+
+.registration .registration-main-container .form-box-container .form-box .form-header{
+    font-size: 5rem;
+    letter-spacing: 2.5rem;
+    color: white;
+    justify-self: flex-start;
+}
+
+.registration .registration-main-container .form-box-container .form-box .form-body{
+    padding: 6rem 10rem;
+    width: 100%;
+}
+
+.registration .registration-main-container .form-box-container .form-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration .registration-main-container .form-box-container .form-footer button{
+    font-size: 3rem;
+    border: none;
+    outline: none;
+    padding: 1rem 5rem;
+    margin: 0 4rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.registration .registration-main-container .form-box-container .form-footer button:disabled{
+    cursor: no-drop;
 }
 
 @media only screen and (max-width:25em){
