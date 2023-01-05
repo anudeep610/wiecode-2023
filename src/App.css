@@ -19,6 +19,11 @@ html {
     font-size: 50%;
 }
 
+.loader-container{
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen and (min-width:125em){
     html{
         font-size: 70%;

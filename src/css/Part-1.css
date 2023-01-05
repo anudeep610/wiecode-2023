@@ -44,14 +44,14 @@
 
 .part-1-main-container .abstract-container a{
     font-size: 3rem;
-    color: blueviolet;
+    color: red;
     text-decoration: none;
 }
 
 .part-1-main-container .abstract-container .upload{
     width: 100%;
     font-size: 2.5rem;
-    color: white;
+    /* color: white; */
 }
 
 .part-1-main-container .input-container-box{
