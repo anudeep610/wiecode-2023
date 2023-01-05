@@ -17,7 +17,7 @@ export default function Part(props) {
       </Form.Group>
       <Form.Group className="abstract-container">
         <Form.Label className='abstract-text'> Upload File :</Form.Label>
-        <Form.Control className='upload' required type="file" />
+        <Form.Control className='upload' required type="file" onChange={(e)=>props.setAbstract(e.target.files[0])}/>
       </Form.Group>
     </Form>
   )

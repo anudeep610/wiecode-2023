@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 import userContext from "../utils/context";
+import axios from "../axios/axios";
 import "../css/Registration.css";
 
 import Part1 from "../components/forms/Part-1";
@@ -10,6 +12,7 @@ import Footer from './Footer';
 
 export default function Registration() {
 
+    const navigate = useNavigate();
     const user = useContext(userContext);
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(false)
@@ -18,10 +21,30 @@ export default function Registration() {
     const [teamName, setTeamName] = useState("");
     const [domain, setDomain] = useState("");
     const [teamDetails, setTeamDetails] = useState([]);
+    const [abstract, setAbstract] = useState();
 
-    const handleSubmit = () => {
+    const handleSubmit = async() => {
         setLoading(true);
-        console.log(teamDetails,teamSize,teamName,domain);
+        const form = new FormData();
+        form.append('abstract',abstract);
+        form.append('teamSize',teamSize);
+        form.append('domain',domain);
+        form.append('teamName',teamName);
+        form.append('teamDetails', JSON.stringify(teamDetails));
+        console.log(teamDetails,teamSize,teamName,domain,abstract);
+        const res = await axios.post("/register",form,{
+            headers:{
+                "Content-Type":"multipart/form-data"
+            }
+        }).catch((err)=>{
+            console.log(err);
+            alert("something went wrong ;) please try again later");
+            navigate("/");
+        });
+        if(res.data.status===200){
+            alert("We have received your abstract. All the best :)");
+            navigate("/");
+        }
         setLoading(false);
     }
 
@@ -31,7 +54,7 @@ export default function Registration() {
         else if (page === 1 && !loading)
             return <Part2 setTeamDetails={setTeamDetails} teamDetails={teamDetails}/>
         else if (page === 2 && !loading)
-            return <Part3 setDomain={setDomain}/>
+            return <Part3 setDomain={setDomain} setAbstract={setAbstract}/>
         else if (loading)
             return <div>Loading</div>
     }
@@ -73,7 +96,6 @@ export default function Registration() {
                     }else{
                         const mobile = "m"+i+"Mobile";
                         const email = "m"+i+"Email";
-                        console.log(teamDetails[i][mobile])
                         if(teamDetails[i][mobile].length!==10 || !(/^[6789]\d{9}$/.test(teamDetails[i][mobile]))){
                             alert("Team member " + i + " mobile number not valid")
                             return;
