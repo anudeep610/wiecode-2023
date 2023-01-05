@@ -63,11 +63,11 @@ export default function Part(props) {
         <h1 className='input-container-heading'> Team Member 2 </h1>
         <Form.Group className="input-container">
           <Form.Label htmlFor="name" className='label'>Name :</Form.Label>
-          <Form.Control name='name' size="lg" className='input-box' type="text" onChange={(e) => {user.teamDetails[1].m2Name=e.target.value}}/>
+          <Form.Control name='name' size="lg" className='input-box' type="text" onChange={(e) => {props.setTeamDetails([props.teamDetails[0], props.teamDetails[1], {...props.teamDetails[2], "m2Name":e.target.value}, props.teamDetails[3]])}}/>
         </Form.Group>
         <Form.Group className="input-container">
           <Form.Label htmlFor="mob" className='label'>Mobile :</Form.Label>
-          <Form.Control name='mob' size="lg" className='input-box' type="text" onChange={(e) => {user.teamDetails[1].m2Mobile=e.target.value}}/>
+          <Form.Control name='mob' size="lg" className='input-box' type="text" onChange={(e) => {props.setTeamDetails([props.teamDetails[0], props.teamDetails[1], {...props.teamDetails[2], "m2Mobile":e.target.value}, props.teamDetails[3]])}}/>
         </Form.Group>
         <Form.Group className="input-container">
           <Form.Label htmlFor="gen" className='label'>Gender :</Form.Label>
@@ -75,11 +75,11 @@ export default function Part(props) {
         </Form.Group>
         <Form.Group className="input-container">
           <Form.Label htmlFor="email" className='label'>Email :</Form.Label>
-          <Form.Control name='email' size="lg" className='input-box' type="text" onChange={(e) => {user.teamDetails[1].m2Email=e.target.value}}/>
+          <Form.Control name='email' size="lg" className='input-box' type="text" onChange={(e) => {props.setTeamDetails([props.teamDetails[0], props.teamDetails[1],  {...props.teamDetails[2], "m2Email":e.target.value}, props.teamDetails[3]])}}/>
         </Form.Group>
         <Form.Group className="input-container">
           <Form.Label htmlFor="college" className='label'>College :</Form.Label>
-          <Form.Control name='college' size="lg" className='input-box' type="text" onChange={(e) => {user.teamDetails[1].m2Clg=e.target.value}}/>
+          <Form.Control name='college' size="lg" className='input-box' type="text" onChange={(e) => {props.setTeamDetails([props.teamDetails[0], props.teamDetails[1],{...props.teamDetails[2], "m2Clg":e.target.value}, props.teamDetails[3]])}}/>
         </Form.Group>
       </Form>
       }
@@ -89,11 +89,11 @@ export default function Part(props) {
         <h1 className='input-container-heading'> Team Member 3 </h1>
         <Form.Group className="input-container">
           <Form.Label htmlFor="name" className='label'>Name :</Form.Label>
-          <Form.Control name='name' size="lg" className='input-box' type="text" onChange={(e) => {user.teamDetails[1].m3Name=e.target.value}}/>
+          <Form.Control name='name' size="lg" className='input-box' type="text" onChange={(e) => {props.setTeamDetails([props.teamDetails[0], props.teamDetails[1], props.teamDetails[2], {...props.teamDetails[3], "m3Name":e.target.value}])}}/>
         </Form.Group>
         <Form.Group className="input-container">
           <Form.Label htmlFor="mob" className='label'>Mobile :</Form.Label>
-          <Form.Control name='mob' size="lg" className='input-box' type="text" onChange={(e) => {user.teamDetails[1].m3Mobile=e.target.value}}/>
+          <Form.Control name='mob' size="lg" className='input-box' type="text" onChange={(e) => {props.setTeamDetails([props.teamDetails[0], props.teamDetails[1], props.teamDetails[2], {...props.teamDetails[3], "m3Mobile":e.target.value}])}}/>
         </Form.Group>
         <Form.Group className="input-container">
           <Form.Label htmlFor="gen" className='label'>Gender :</Form.Label>
@@ -101,11 +101,11 @@ export default function Part(props) {
         </Form.Group>
         <Form.Group className="input-container">
           <Form.Label htmlFor="email" className='label'>Email :</Form.Label>
-          <Form.Control name='email' size="lg" className='input-box' type="text" onChange={(e) => {user.teamDetails[1].m3Email=e.target.value}}/>
+          <Form.Control name='email' size="lg" className='input-box' type="text" onChange={(e) => {props.setTeamDetails([props.teamDetails[0], props.teamDetails[1], props.teamDetails[2], {...props.teamDetails[3], "m3Email":e.target.value}])}}/>
         </Form.Group>
         <Form.Group className="input-container">
           <Form.Label htmlFor="college" className='label'>College :</Form.Label>
-          <Form.Control name='college' size="lg" className='input-box' type="text" onChange={(e) => {user.teamDetails[1].m2Clg=e.target.value}}/>
+          <Form.Control name='college' size="lg" className='input-box' type="text" onChange={(e) => {props.setTeamDetails([props.teamDetails[0], props.teamDetails[1], props.teamDetails[2], {...props.teamDetails[3], "m3Clg":e.target.value}])}}/>
         </Form.Group>
       </Form>
       }

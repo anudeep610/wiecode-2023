@@ -21,13 +21,13 @@ export default function Registration() {
 
     const handleSubmit = () => {
         setLoading(true);
-        console.log(teamDetails);
+        console.log(teamDetails,teamSize,teamName,domain);
         setLoading(false);
     }
 
     const PageDisplay = () => {
         if (page === 0 && !loading)
-            return <Part1 setTeamSize={setTeamSize} />
+            return <Part1 setTeamSize={setTeamSize} setTeamName={setTeamName}/>
         else if (page === 1 && !loading)
             return <Part2 setTeamDetails={setTeamDetails} teamDetails={teamDetails}/>
         else if (page === 2 && !loading)
@@ -38,27 +38,50 @@ export default function Registration() {
 
     const handleNext = async() => {
         if(page===0){
-            if(teamSize===0){
+            if(teamName===""){
+                alert("Please fill the team name");
+            }else if(teamSize===0){
                 alert("Please select the team size");
             }else{
                 setPage((currPage) => currPage + 1);
             }
         }else if(page===1){
-            await setTeamDetails(teamDetails.filter(item => item !== undefined));
-            console.log(teamDetails)
-            if(teamDetails.length<teamSize){
+            await setTeamDetails(teamDetails.filter(item => item ));
+            if(teamDetails.length < teamSize){
                 alert("Please fill all the member details");
                 return;
             }
             for(let i=0; i<teamSize;i++){
                 let vals = Object.values(teamDetails[i]);
                 if(vals.length<4){
-                    alert("please fill all the details of " + (i===0?"leader":"member"+ (i+1)))
+                    alert("please fill all the details of " + (i===0?"leader":"member "+ (i)))
+                    return;
                 }
                 for(let j=0; j<vals.length; j++)
                     if(vals[j]===""){
                         alert("Please fill all the member details");
                         return;
+                    }else if(i===0){
+                        if(teamDetails[0].leadMobile.length!==10 || !(/^[6789]\d{9}$/.test(teamDetails[0].leadMobile))){
+                            alert("Team lead mobile number not valid")
+                            return;
+                        }
+                        if(!(/^\S+@\S+\.\S+$/).test(teamDetails[0].leadEmail)){
+                            alert("Team lead email id not valid")
+                            return;
+                        }
+                    }else{
+                        const mobile = "m"+i+"Mobile";
+                        const email = "m"+i+"Email";
+                        console.log(teamDetails[i][mobile])
+                        if(teamDetails[i][mobile].length!==10 || !(/^[6789]\d{9}$/.test(teamDetails[i][mobile]))){
+                            alert("Team member " + i + " mobile number not valid")
+                            return;
+                        }
+                        if(!(/^\S+@\S+\.\S+$/).test(teamDetails[i][email])){
+                            alert("Team member " + i + " email id not valid")
+                            return;
+                        }
                     }
             }
             setPage((currPage) => currPage + 1);
