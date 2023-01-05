@@ -4,7 +4,7 @@ import {Routes, Route} from "react-router";
 import Registration from "./components/Registration";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Home from "./components/Home";
+import Home from "./routes/home.jsx";
 import PageNotFound from './components/PageNotFound';
 
 function App() {
