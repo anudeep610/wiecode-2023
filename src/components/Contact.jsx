@@ -31,6 +31,10 @@ export default function Contact() {
             mode: 'cors',
             body: form,
         }).then(function () {
+            setName("");
+            setEmail("");
+            setMobile("");
+            setQuery("");
             alert('Your mail is sent!');
             setLoading(false)
         }).catch(function (error) {
