@@ -1,9 +1,11 @@
 import React from 'react'
 //importing stylesheet
 import "../css/Home.css"
+//foteer  componet
+import Footer from "../components/Footer"
 //importing the Link from recat router
 import {Link} from "react-router-dom"
-import { AiOutlineArrowDown } from "react-icons/ai";
+import { TfiQuoteLeft } from "react-icons/tfi";
 
 //importing wie logo
 import wieLogo from "../assets/images/WIELogo-removebg-preview.png"
@@ -18,10 +20,10 @@ function Home() {
                                 <img src= {wieLogo} alt="" />
                             </div>
                             <ul className='home-unodered-list'>
-                                <li><p>Home</p></li>
-                                <li><p>Registration</p></li>
-                                <li><p>About Us</p></li>
-                                <li><p>Contact Us</p></li>
+                                <li><Link to ="/"><p>Home</p></Link></li>
+                                <li><Link to="/registration"><p>Registration</p></Link></li>
+                                <li><Link to ="/contact"><p>Contact Us</p></Link></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -59,17 +61,21 @@ function Home() {
                             </div>
                             <div className="home-contant-row3">
                                 <div><p>Venue</p></div>
-                                <div><h3>Siddaganga Institute of Technology</h3></div>
+                                <div><h3>SIT Tumkur</h3></div>
                             </div>
                         </div> */}
                     </div>
                     <div className="home-scroll-down-container">
-                        <AiOutlineArrowDown/>
+                        {/* <AiOutlineArrowDown/> */}
                     </div>
                 </div>
                 <div className="home-hackathon-contents">
-
+                    <div className="home-theme-container">
+                        <h2>IDEA</h2>
+                        <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> desiging solutions, coding on a <br /><span className='home-theme-span'>theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
+                    </div>
                 </div>
+                <Footer/>
             </div>
         </>
     )

@@ -44,6 +44,7 @@
     justify-content: space-around;
     align-items: center;
 }
+
 .home-navabar-container ul li{
     list-style: none;
     /* padding: 0.5rem; */
@@ -51,6 +52,9 @@
     display: flex;
     align-items: center;
 
+}
+.home-unodered-list a{
+    text-decoration: none;
 }
 .home-navabar-container ul li:hover{
     cursor: pointer;
@@ -345,6 +349,41 @@
 
 .home-hackathon-contents{
     height: 100vh;
-    background-image: url("../assets/Newfolder/line1.png");
+    background-image: url("../assets/images/line-1.png");
     background-size: 100% 100%;
 }
+.home-theme-container{
+    margin-left: 4rem;
+}
+.home-theme-container h2{
+    font-family: "engschrift-caps" sans-serif  !important;
+    color: rgba(215, 218, 220,0.4);
+    font-size: 7.5rem;
+    letter-spacing: 2rem;
+    font-weight:300;
+}
+.home-theme-container p{
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+    font-family: 'Inconsolata', monospace !important;
+    color:rgba(256,256,256,0.6);
+}
+.home-theme-container p .home-theme-name{
+    font-weight: 400;
+    font-size: 3.9rem;
+    color: #7ADFD1;
+}
+.home-theme-container p .home-theme-span{
+    font-size: 2.6rem;
+    color: rgba(256,256,256,0.6);
+    font-weight: 300;
+
+}
+.home-theme-container p .theme-quote{
+    color: #1C1E35;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top:-1rem;
+    font-weight: 300;
+}
+
