@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import userContext from "../utils/context";
 import axios from "../axios/axios";
 import "../css/Registration.css";
-
+import wieLogo from "../assets/images/WIELogo-removebg-preview.png"
 import Part1 from "../components/forms/Part-1";
 import Part2 from "../components/forms/Part-2";
 import Part3 from "../components/forms/Part-3";
@@ -56,7 +56,7 @@ export default function Registration() {
         else if (page === 2 && !loading)
             return <Part3 setDomain={setDomain} setAbstract={setAbstract} />
         else if (loading)
-            return <Loader/>
+            return <Loader />
     }
 
     const handleNext = async () => {
@@ -125,11 +125,14 @@ export default function Registration() {
                 <div className="registration-main-container">
                     <div className="home-navabar-wrapper">
                         <div className="home-navabar-container">
+                            <div className="home-wie-logo-container">
+                                <img src={wieLogo} alt="" />
+                            </div>
                             <ul className='home-unodered-list'>
-                                <li><p>Home</p></li>
-                                <li><p>Registration</p></li>
-                                <li><p>About Us</p></li>
-                                <li><p>Contact Us</p></li>
+                                <li><Link to="/"><p>Home</p></Link></li>
+                                <li><Link to="/registration"><p>Registration</p></Link></li>
+                                <li><Link to="/contact"><p>Contact Us</p></Link></li>
+
                             </ul>
                         </div>
                     </div>

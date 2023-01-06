@@ -4,8 +4,9 @@ import Footer from './Footer';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Loader from "./loader";
-import emailjs from '@emailjs/browser';
-import { FaBuromobelexperte } from 'react-icons/fa';
+import {Link} from "react-router-dom";
+
+import wieLogo from "../assets/images/WIELogo-removebg-preview.png"
 
 export default function Contact() {
 
@@ -64,11 +65,14 @@ export default function Contact() {
             <div className="contact-main-container">
                 <div className="home-navabar-wrapper">
                     <div className="home-navabar-container">
+                        <div className="home-wie-logo-container">
+                            <img src={wieLogo} alt="" />
+                        </div>
                         <ul className='home-unodered-list'>
-                            <li><p>Home</p></li>
-                            <li><p>Registration</p></li>
-                            <li><p>About Us</p></li>
-                            <li><p>Contact Us</p></li>
+                            <li><Link to="/"><p>Home</p></Link></li>
+                            <li><Link to="/registration"><p>Registration</p></Link></li>
+                            <li><Link to="/contact"><p>Contact Us</p></Link></li>
+
                         </ul>
                     </div>
                 </div>
