@@ -4,12 +4,16 @@ import "../css/Home.css"
 //foteer  componet
 import Footer from "../components/Footer"
 //importing the Link from recat router
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import { TfiQuoteLeft } from "react-icons/tfi";
 
 //importing wie logo
 import wieLogo from "../assets/images/WIELogo-removebg-preview.png"
 function Home() {
+    const navigate = useNavigate()
+    const handleRegetartionClick = async()=>{
+        navigate("/registration")
+    }
     return (
         <>
             <div className="home-main-container">
@@ -40,12 +44,14 @@ function Home() {
                                     
                                 <h3>Crack the Hack</h3>
                                 <div className="home-register-button-container">
-                                    <button className='button-49'>Register</button>
+                                    <button 
+                                    onClick={handleRegetartionClick}
+                                    className='button-49'>Register</button>
                                 </div>
                                 
                             </div>
                         </div>
-                        {/* <div className="home-content-col2">
+                        <div className="home-content-col2">
                             <div className="home-contant-row1">
                                 <div className="home-content-r1c1">
                                     <div><p>January</p></div>
@@ -63,10 +69,7 @@ function Home() {
                                 <div><p>Venue</p></div>
                                 <div><h3>SIT Tumkur</h3></div>
                             </div>
-                        </div> */}
-                    </div>
-                    <div className="home-scroll-down-container">
-                        {/* <AiOutlineArrowDown/> */}
+                        </div>
                     </div>
                 </div>
                 <div className="home-hackathon-contents">

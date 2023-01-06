@@ -4,15 +4,17 @@
 }
 .home-main-container{
     width: 100%;
+    
 }
 .home-landing-bg-container{
     height: 100vh;
     width: 100%;
     background-image: url("../assets/images/website-bg.gif");
     background-size:100% 100%;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
+    align-items: center;
 }
 .home-navabar-wrapper{
     width: 100%;
@@ -114,6 +116,7 @@
     bottom: 20%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .home-content-container{
     padding: 0 2rem;
@@ -309,6 +312,10 @@
     border: 2px solid #fffffe;
     text-align: center;
     font-weight: 300;
+    margin-right: 5rem;
+    margin-bottom: -20rem;
+    letter-spacing: 0.2rem;
+    
 }
 .home-contant-row1{
     display: flex;
@@ -320,13 +327,14 @@
 .home-content-r1c1{
     width: 50%;
     border-right:2px solid #fffffe;
-    
+    padding: 0.5rem 1rem;
 }
 .home-content-r1c1 P,
 .home-content-r1c2 P,
 .home-contant-row3 P{
-    padding-top: 1rem ;
+    padding: 1rem 1rem;
     font-size: 1.5rem;
+    
 }
 .home-content-r1c2{
     width: 50%;
@@ -349,7 +357,7 @@
 
 .home-hackathon-contents{
     height: 100vh;
-    background-image: url("../assets/images/line-1.png");
+    background-image: url("../assets/images/line-1png.png");
     background-size: 100% 100%;
 }
 .home-theme-container{
