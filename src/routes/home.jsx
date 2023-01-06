@@ -1,13 +1,19 @@
 import React from 'react'
 //importing stylesheet
 import "../css/Home.css"
+//foteer  componet
+import Footer from "../components/Footer"
 //importing the Link from recat router
-import {Link} from "react-router-dom"
-import { AiOutlineArrowDown } from "react-icons/ai";
+import {Link, useNavigate} from "react-router-dom"
+import { TfiQuoteLeft } from "react-icons/tfi";
 
 //importing wie logo
 import wieLogo from "../assets/images/WIELogo-removebg-preview.png"
 function Home() {
+    const navigate = useNavigate()
+    const handleRegetartionClick = async()=>{
+        navigate("/registration")
+    }
     return (
         <>
             <div className="home-main-container">
@@ -18,10 +24,10 @@ function Home() {
                                 <img src= {wieLogo} alt="" />
                             </div>
                             <ul className='home-unodered-list'>
-                                <li><p>Home</p></li>
-                                <li><p>Registration</p></li>
-                                <li><p>About Us</p></li>
-                                <li><p>Contact Us</p></li>
+                                <li><Link to ="/"><p>Home</p></Link></li>
+                                <li><Link to="/registration"><p>Registration</p></Link></li>
+                                <li><Link to ="/contact"><p>Contact Us</p></Link></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -38,12 +44,14 @@ function Home() {
                                     
                                 <h3>Crack the Hack</h3>
                                 <div className="home-register-button-container">
-                                    <button className='button-49'>Register</button>
+                                    <button 
+                                    onClick={handleRegetartionClick}
+                                    className='button-49'>Register</button>
                                 </div>
                                 
                             </div>
                         </div>
-                        {/* <div className="home-content-col2">
+                        <div className="home-content-col2">
                             <div className="home-contant-row1">
                                 <div className="home-content-r1c1">
                                     <div><p>January</p></div>
@@ -59,17 +67,18 @@ function Home() {
                             </div>
                             <div className="home-contant-row3">
                                 <div><p>Venue</p></div>
-                                <div><h3>Siddaganga Institute of Technology</h3></div>
+                                <div><h3>SIT Tumkur</h3></div>
                             </div>
-                        </div> */}
-                    </div>
-                    <div className="home-scroll-down-container">
-                        <AiOutlineArrowDown/>
+                        </div>
                     </div>
                 </div>
                 <div className="home-hackathon-contents">
-
+                    <div className="home-theme-container">
+                        <h2>IDEA</h2>
+                        <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> desiging solutions, coding on a <br /><span className='home-theme-span'>theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
+                    </div>
                 </div>
+                <Footer/>
             </div>
         </>
     )
