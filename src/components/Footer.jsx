@@ -21,19 +21,21 @@ export default function Footer() {
                 <div className="social-container">
                 <div className="icons-container">
                         <span className="icon-logo">
-                            <AiFillInstagram className='icon'/>
+                            <a href="https://www.instagram.com/ieeesitsb/?hl=en" target="_blank">
+                                <AiFillInstagram className='icon'/>
+                            </a>
                         </span>
 
                         <span className="icon-logo">
-                            <AiOutlineYoutube className='icon'/>
+                            <a href="https://www.linkedin.com/company/ieee-sit-student-branch/">
+                                <AiOutlineYoutube className='icon'/>
+                            </a>
                         </span>
 
                         <span className="icon-logo">
-                            <FaFacebookF className='icon'/>
-                        </span>
-
-                        <span className="icon-logo">
-                            <AiFillLinkedin className='icon'/>
+                            <a href="https://www.linkedin.com/company/ieee-sit-student-branch/">
+                                <AiFillLinkedin className='icon'/>
+                            </a>
                         </span>
                     </div>
                 </div>
