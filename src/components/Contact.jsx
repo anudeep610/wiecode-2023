@@ -102,18 +102,6 @@ export default function Contact() {
                 <div className="contact-card-container">
                     <div className="contact-card-box">
                         <div className="contact-name-box">
-                            <h1 className="contact-name">Chethan Bharadwaj</h1>
-                        </div>
-                        <div className="contact-post-box">
-                            <h1 className="contact-post">Chairman</h1>
-                        </div>
-                        <div className="contact-mobile-box">
-                            <h1 className="contact-mobile">9606416541</h1>
-                        </div>
-                    </div>
-
-                    <div className="contact-card-box">
-                        <div className="contact-name-box">
                             <h1 className="contact-name">Prakruthi C</h1>
                         </div>
                         <div className="contact-post-box">
@@ -121,6 +109,18 @@ export default function Contact() {
                         </div>
                         <div className="contact-mobile-box">
                             <h1 className="contact-mobile">8147382401</h1>
+                        </div>
+                    </div>
+
+                    <div className="contact-card-box">
+                        <div className="contact-name-box">
+                            <h1 className="contact-name">Sneha </h1>
+                        </div>
+                        <div className="contact-post-box">
+                            <h1 className="contact-post">Wie Vice Chairman</h1>
+                        </div>
+                        <div className="contact-mobile-box">
+                            <h1 className="contact-mobile">9606416541</h1>
                         </div>
                     </div>
                 </div>
