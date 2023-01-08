@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,500&display=swap');
-
-.registration .registration-main-container{
-    min-height:100vh;
+.registration .registration-main-container {
+    min-height: 100vh;
     padding: 0 5rem 8rem 5rem;
     background-image: url("../assets/images/line.png");
     background-repeat: no-repeat;
@@ -10,26 +8,27 @@
     flex-direction: column;
 }
 
-.registration .registration-main-container .heading-container{
+.registration .registration-main-container .heading-container {
     align-self: flex-start;
 }
 
-.registration .registration-main-container .heading-container .heading-text{
+.registration .registration-main-container .heading-container .heading-text {
     font-size: 12rem;
+    font-family: "engschrift-caps" sans-serif !important;
+    color: rgba(215, 218, 220, 0.4);
+    font-size: 7.5rem;
     letter-spacing: 6rem;
-    color: rgba(255, 255, 255, 0.128);
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 500;
+    font-weight: 300;
 }
 
-.registration .registration-main-container .line-container{
+.registration .registration-main-container .line-container {
     height: 0.25rem;
-    width:100rem;
+    width: 100rem;
     background-color: rgba(255, 255, 255, 0.05);
     transform: rotate(-320deg);
 }
 
-.registration .registration-main-container .form-box-container{
+.registration .registration-main-container .form-box-container {
     align-self: center;
     justify-self: center;
     display: flex;
@@ -40,7 +39,7 @@
     width: 100%;
 }
 
-.registration .registration-main-container .form-box-container .form-box{
+.registration .registration-main-container .form-box-container .form-box {
     display: flex;
     flex-direction: column;
     align-self: stretch;
@@ -48,24 +47,24 @@
     width: 100%;
 }
 
-.registration .registration-main-container .form-box-container .form-box .form-header{
+.registration .registration-main-container .form-box-container .form-box .form-header {
     font-size: 5rem;
     letter-spacing: 2.5rem;
     color: white;
     justify-self: flex-start;
 }
 
-.registration .registration-main-container .form-box-container .form-box .form-body{
+.registration .registration-main-container .form-box-container .form-box .form-body {
     padding: 6rem 10rem;
     width: 100%;
 }
 
-.registration .registration-main-container .form-box-container .form-footer{
+.registration .registration-main-container .form-box-container .form-footer {
     display: flex;
     justify-content: space-between;
 }
 
-.registration .registration-main-container .form-box-container .form-footer button{
+.registration .registration-main-container .form-box-container .form-footer button {
     font-size: 3rem;
     border: none;
     outline: none;
@@ -73,30 +72,42 @@
     margin: 0 4rem;
     border-radius: 5rem;
     cursor: pointer;
+    letter-spacing: 0.1rem;
+    font-family: 'Inconsolata', monospace !important;
 }
 
-.registration .registration-main-container .form-box-container .form-footer button:disabled{
+.registration .registration-main-container .form-box-container .form-footer button:disabled {
     cursor: no-drop;
 }
 
-@media only screen and (max-width:25em){
-    .registration .registration-main-container .heading-container .heading-text{
+@media only screen and (max-width:37.5em) {
+    .registration .registration-main-container .form-box-container .form-box .form-header {
+        font-size: 10rem;
+    }
+}
+
+@media only screen and (max-width:25em) {
+    .registration .registration-main-container .heading-container .heading-text {
         font-size: 15rem;
         letter-spacing: 6rem;
     }
 
-    .registration .registration-main-container .line-container{
+    .registration .registration-main-container .line-container {
         height: 0;
     }
 }
 
-@media only screen and (max-width:20em){
-    .registration .registration-main-container .heading-container .heading-text{
+@media only screen and (max-width:20em) {
+    .registration .registration-main-container .heading-container .heading-text {
         font-size: 20rem;
         letter-spacing: 4rem;
     }
 
-    .registration .registration-main-container .line-container{
+    .registration .registration-main-container .line-container {
         height: 0;
+    }
+
+    .registration .registration-main-container .form-box-container .form-footer button {
+        font-size: 5rem;
     }
 }

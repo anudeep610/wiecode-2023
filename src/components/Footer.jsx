@@ -27,7 +27,7 @@ export default function Footer() {
                         </span>
 
                         <span className="icon-logo">
-                            <a href="https://www.linkedin.com/company/ieee-sit-student-branch/">
+                            <a href="https://youtube.com/@tech-nomadsieeesitsb638">
                                 <AiOutlineYoutube className='icon'/>
                             </a>
                         </span>

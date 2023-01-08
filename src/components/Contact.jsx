@@ -4,10 +4,13 @@ import Footer from './Footer';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Loader from "./loader";
+import {Link} from "react-router-dom";
+
+import wieLogo from "../assets/images/WIELogo-removebg-preview.png"
 
 export default function Contact() {
 
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -15,28 +18,37 @@ export default function Contact() {
     const [query, setQuery] = useState("");
 
     const sendEmail = () => {
-        const config = {
-            SecureToken:'2f391f8e-5980-43a2-ad94-a603f8706de0',
-            To: 'ieeesitsb2023@gmail.com',
-            From: email,
-            Subject: "query from website",
-            Body: {
-                mobile:mobile,
-                name:name,
-                query:query
-            }
-        };
-        if (window.Email) {
-            window.Email.send(config).then((message) =>{
-                alert("We recived Your query. We will get back soon 😄");
-                setName("");
-                setEmail("");
-                setMobile("");
-                setQuery("");
-            }).catch(
-                (err) => alert("Something went wrong. Please try again. ;)")
-            )
-        }
+        const form = new FormData();
+        form.append('user_name', name);
+        form.append('user_mail', email);
+        form.append('user_mob', mobile);
+        form.append('message', query);
+        form.append('service_id', 'service_7g90xrm');
+        form.append('template_id', 'template_jfwreej');
+        form.append('public_key', 'zxBpdq7tjwbmKR6aI');
+        fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
+            method: 'POST',
+            mode: 'cors',
+            body: form,
+        }).then(function () {
+            setName("");
+            setEmail("");
+            setMobile("");
+            setQuery("");
+            alert('Your mail is sent!');
+            setLoading(false)
+        }).catch(function (error) {
+            alert('Oops... ' + JSON.stringify(error));
+            setLoading(false)
+        });
+        // emailjs.sendForm('service_7g90xrm', 'template_jfwreej', form.current, 'zxBpdq7tjwbmKR6aI')
+        //     .then((result) => {
+        //         console.log(result.text);
+        //         alert("We received your request. we will contact you soon");
+        //     }, (error) => {
+        //         console.log(error.text);
+        //         alert("Please try again later");
+        //     });
     }
 
     const handleSubmit = async (event) => {
@@ -57,11 +69,14 @@ export default function Contact() {
             <div className="contact-main-container">
                 <div className="home-navabar-wrapper">
                     <div className="home-navabar-container">
+                        <div className="home-wie-logo-container">
+                            <img src={wieLogo} alt="" />
+                        </div>
                         <ul className='home-unodered-list'>
-                            <li><p>Home</p></li>
-                            <li><p>Registration</p></li>
-                            <li><p>About Us</p></li>
-                            <li><p>Contact Us</p></li>
+                            <li><Link to="/"><p>Home</p></Link></li>
+                            <li><Link to="/registration"><p>Registration</p></Link></li>
+                            <li><Link to="/contact"><p>Contact Us</p></Link></li>
+
                         </ul>
                     </div>
                 </div>
@@ -89,17 +104,41 @@ export default function Contact() {
 
                             <Form.Group>
                                 <Form.Label htmlFor='query' className='label'>Message :</Form.Label>
-                                <Form.Control name='query' size="lg" id="size" className='input-box' as="textarea" required rows={3} onChange={(e) => { setQuery(e.target.value) }} value={query}/>
+                                <Form.Control name='query' size="lg" id="size" className='input-box' as="textarea" required rows={3} onChange={(e) => { setQuery(e.target.value) }} value={query} />
                             </Form.Group>
 
                             <Button disabled={loading} variant="success" type="submit" size="lg" className='button'>SEND</Button>
                         </Form>
                     }
                     {
-                        loading && <Loader/>
+                        loading && <Loader />
                     }
                 </div>
                 <div className="contact-card-container">
+                    <div className="contact-card-box">
+                        <div className="contact-name-box">
+                            <h1 className="contact-name">Chethan Baradwaj</h1>
+                        </div>
+                        <div className="contact-post-box">
+                            <h1 className="contact-post">Chairman</h1>
+                        </div>
+                        <div className="contact-mobile-box">
+                            <h1 className="contact-mobile">9606416541</h1>
+                        </div>
+                    </div>
+
+                    <div className="contact-card-box">
+                        <div className="contact-name-box">
+                            <h1 className="contact-name">Shivraj Karjagi</h1>
+                        </div>
+                        <div className="contact-post-box">
+                            <h1 className="contact-post">Vice Chairman</h1>
+                        </div>
+                        <div className="contact-mobile-box">
+                            <h1 className="contact-mobile">9743703243</h1>
+                        </div>
+                    </div>
+
                     <div className="contact-card-box">
                         <div className="contact-name-box">
                             <h1 className="contact-name">Prakruthi C</h1>
@@ -114,13 +153,13 @@ export default function Contact() {
 
                     <div className="contact-card-box">
                         <div className="contact-name-box">
-                            <h1 className="contact-name">Sneha </h1>
+                            <h1 className="contact-name">Sneha N</h1>
                         </div>
                         <div className="contact-post-box">
                             <h1 className="contact-post">Wie Vice Chairman</h1>
                         </div>
                         <div className="contact-mobile-box">
-                            <h1 className="contact-mobile">9606416541</h1>
+                            <h1 className="contact-mobile">9353559069</h1>
                         </div>
                     </div>
                 </div>

@@ -63,11 +63,11 @@ function Home() {
                                 </div>
                             </div>
                             <div className="home-contant-row2">
-                                <h2>Tumkuru</h2>
+                                <h2>Tumakuru</h2>
                             </div>
                             <div className="home-contant-row3">
                                 <div><p>Venue</p></div>
-                                <div><h3>SIT Tumkur</h3></div>
+                                <div><h3>SIT Tumakuru</h3></div>
                             </div>
                         </div>
                     </div>
