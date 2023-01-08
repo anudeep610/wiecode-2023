@@ -78,6 +78,15 @@ function Home() {
                         <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> desiging solutions, coding on a <br /><span className='home-theme-span'>theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
                     </div>
                 </div>
+                <div className="home-domains-container">
+                    <div class='card'>
+                        <div class='info'>
+                        <h1 class='title'>Healthcare</h1>
+                        <p class='description'>Healthcare industry has vigorously boomed in the last couple of years. Considering the dependency, the patients are consumers of hospitals/clinics/pharmacies, to enhance or create a favourable and secure environment is essential  </p>
+                        </div>
+                    </div>
+                    
+                </div>
                 <Footer/>
             </div>
         </>
