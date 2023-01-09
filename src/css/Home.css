@@ -23,6 +23,7 @@
     align-items: center;
     padding-top:2rem;
     position: relative;
+    z-index: 999;
 }
 .home-navabar-container{
     width: 100%;
@@ -30,15 +31,16 @@
     justify-content: space-between;
     align-items: center;
     padding-right: 2rem;
+    height: 15vh;
 
 }
 .home-wie-logo-container{
-    width: 13vw;
-    height: 13vh;
+    
     padding-left: 3rem;
 }
 .home-wie-logo-container img{
-    width: 100%;
+    width: 30%;
+    height: 13vh;
     height: 100%;
 }
 .home-navabar-container ul{
@@ -55,7 +57,7 @@
     align-items: center;
 
 }
-.home-unodered-list a{
+.home-navabar-container a{
     text-decoration: none;
 }
 .home-navabar-container ul li:hover{
@@ -109,11 +111,207 @@
         width: 50%;
     }
 }
+.home-hamburger{
+    display: none;
+}
+.mobile-navbar{
+    display: none;
+}
+.mobile-nav-bar{
+    display: none;
+}
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    .home-landing-bg-container{
+    width: 100%;
+    background-image: url("../assets/images/line.png");
+    background-size:100% 100%;
+    display: block;
+    }
+    .home-wie-logo-container{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .home-wie-logo-container img{
+        width: 30%;
+        height: 90%;
+    }
+    .home-navabar-wrapper{
+        /* position: sticky;
+        top: 0; */
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+    .home-navabar-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .home-navabar-container ul{
+        display: none;
+    }
+    .mobile-nav-bar{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .home-hamburger{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        padding-right: 5rem;
+        /* margin-bottom:5rem; */
+    }
+    .home-hamburger button{
+        text-decoration: none;
+        background-color: transparent;
+        outline: none;
+        border: none;
+
+    }
+    .display-none{
+        display: none;
+    }
+    .mobile-navbar{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        list-style-type:none;
+        justify-content: flex-end;
+        /* align-items: center; */
+        text-align: center;
+        
+        top: 100%;
+        width: 100%;
+        background-color: black;
+        
+
+    }
+    .mobile-navbar li{
+        padding: 5rem 3rem;
+        border-bottom: 2px solid rgba(91,91,91,0.4);
+        
+    }
+    .mobile-nav-bar a{
+        text-decoration: none;
+    }
+    .mobile-nav-bar p{
+        font-size: 11rem;
+        font-weight: 300;
+        color: #8F90A9;
+        font-weight: 350;
+        letter-spacing: 1rem;
+        color: white;
+        
+    }
+
+
+} 
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .home-landing-bg-container{
+    width: 100%;
+    background-image: url("../assets/images/line.png");
+    background-size:100% 100%;
+    display: block;
+    }
+    .home-wie-logo-container{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .home-wie-logo-container img{
+        width: 30%;
+        height: 90%;
+    }
+    .home-navabar-wrapper{
+        position: sticky;
+        top: 0;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+    .home-navabar-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .home-navabar-container ul{
+        display: none;
+    }
+    .mobile-nav-bar{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .home-hamburger{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        padding-right: 5rem;
+        /* margin-bottom:5rem; */
+    }
+    .home-hamburger button{
+        text-decoration: none;
+        background-color: transparent;
+        outline: none;
+        border: none;
+
+    }
+    .display-none{
+        display: none;
+    }
+    .mobile-navbar{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        list-style-type:none;
+        justify-content: flex-end;
+        /* align-items: center; */
+        text-align: center;
+        
+        top: 100%;
+        width: 100%;
+        background-color: black;
+        
+
+    }
+    .mobile-navbar li{
+        padding: 5rem 3rem;
+        border-bottom: 2px solid rgba(91,91,91,0.4);
+        
+    }
+    .mobile-nav-bar a{
+        text-decoration: none;
+    }
+    .mobile-nav-bar p{
+        font-size: 11rem;
+        font-weight: 300;
+        color: #8F90A9;
+        font-weight: 350;
+        letter-spacing: 1rem;
+        color: white;
+        
+    }
+
+} 
+
+
 
 .home-content-container{
     width: 100%;
-    position: absolute;
-    bottom: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,35 +323,6 @@
     /* color:#1C1E35; */
     color: #fffffe;
 }
-/* .home-wie-code-heading{
-    position: relative;
-}
-.home-wie-code-heading span{
-    font-size: 8.5rem;
-    font-family: "engschrift-caps" sans-serif  !important;
-    position: relative;
-    letter-spacing: 0.5rem;
-    font-weight: 400;
-    animation-name:wieCodeFlip;
-    animation-duration: 1000ms;
-    animation-delay: 100ms;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-}.home-wie-code-heading p{
-    display:inline;
-} */
-/* .home-wie-code-heading::after{
-    content: "";
-    width: 50%;
-    height: 2px;
-    background-color: #fffffe;
-    position: absolute;
-    bottom: 0;
-    left: -4%;
-} */
-
-
-
 .home-wiecode-text{
     display: flex;
     flex-direction: column;
@@ -164,49 +333,25 @@
     position: relative;
     letter-spacing: 0.5rem;
     font-weight: 400;
-    /* animation-name:wieCodeFlip;
-    animation-duration: 1000ms;
-    animation-delay: 100ms;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite; */
 
 }
-.home-content-col1 .home-wiecode-text h2::after{
-    content: "";
-    width: 50%;
-    height: 2px;
-    background-color: #fffffe;
-    position: absolute;
-    bottom: 0;
-    left: -4%;
-}
+
 
 .home-content-col1 .home-wiecode-text h2 span{
     color: #7ADFD1;
     
+}
 
-}
-@keyframes wieCodeFlip {
-    0%{
-        transform: rotateY(0);
-    }
-    50%{
-        transform: rotateX(-180deg);
-    }
-}
 .home-wiecode-text h3{
     font-size: 2.7rem;
     font-weight: 300;
     letter-spacing: 0.5rem;
 }
-.home-wiecode-text button{
 
-}
 
 .home-register-button-container{
     padding-top: 3rem;
 }
-/* CSS */
     .button-49,
     .button-49:after {
     /* margin-top: 3rem; */
@@ -307,6 +452,197 @@
         line-height: 50px;
     }
 }
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    .home-content-container{
+        height: 65vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-content-col1{
+        height: 45vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-wiecode-text{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        }
+    .home-content-col1 .home-wiecode-text h2{
+        font-size: 25rem;
+        font-family: "engschrift-caps" sans-serif  !important;
+        position: relative;
+        letter-spacing: 0.5rem;
+        font-weight: 400;
+    
+    }
+    .home-content-col1 .home-wiecode-text h2::after{
+        content: "";
+        width: 70%;
+        height: 2px;
+        background-color: #fffffe;
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+        animation-name:afterSlider;
+        animation-timing-function: ease;
+        animation-duration: 1000ms;
+        animation-iteration-count: 1;
+        transform-origin: left;
+    }
+    @keyframes afterSlider {
+        0%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(1);
+        }
+        
+    }
+    .home-wiecode-text h3{
+        font-size: 9rem;
+        font-weight: 300;
+        letter-spacing: 0.5rem;
+        padding: 2rem 0;
+    }
+    .button-49{
+    /* margin-top: 3rem; */
+    width: 250px;
+    height: 70px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 35px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #1C1E35 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+    
+} 
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .home-content-container{
+        height: 65vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-content-col1{
+        height: 45vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-wiecode-text{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        }
+    .home-content-col1 .home-wiecode-text h2{
+        font-size: 25rem;
+        font-family: "engschrift-caps" sans-serif  !important;
+        position: relative;
+        letter-spacing: 0.5rem;
+        font-weight: 400;
+    
+    }
+    .home-content-col1 .home-wiecode-text h2::after{
+        content: "";
+        width: 70%;
+        height: 2px;
+        background-color: #fffffe;
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+        animation-name:afterSlider;
+        animation-timing-function: ease;
+        animation-duration: 1000ms;
+        animation-iteration-count: 1;
+        transform-origin: left;
+    }
+    @keyframes afterSlider {
+        0%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(1);
+        }
+        
+    }
+    .home-wiecode-text h3{
+        font-size: 9rem;
+        font-weight: 300;
+        letter-spacing: 0.5rem;
+        padding: 2rem 0;
+    }
+    .button-49{
+    /* margin-top: 3rem; */
+    width: 250px;
+    height: 70px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 35px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #1C1E35 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+}
+@media only screen and (max-width: 1023px) and (min-width: 769px) {
+    .home-content-container{
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+} 
+@media only screen and (min-width: 1024px) {
+    .home-content-container{
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .home-content-col1 .home-wiecode-text h2::after{
+        content: "";
+        width: 50%;
+        height: 2px;
+        background-color: #fffffe;
+        position: absolute;
+        bottom: 0;
+        left: -4%;
+    }
+} 
 .home-content-col2{
     color: #fffffe;
     border: 2px solid #fffffe;
@@ -355,10 +691,17 @@
     font-weight: 300;
 } */
 
+
+
+
+
+
+
 .home-hackathon-contents{
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url("../assets/images/line-1png.png");
     background-size: 100% 100%;
+    /* margin: 2rem 0; */
 }
 .home-theme-container{
     margin-left: 4rem;
@@ -394,129 +737,133 @@
     margin-top:-1rem;
     font-weight: 300;
 }
-
-
-.home-domains-container{
-    background-image: url("../assets/images/vg4.png");
-    padding: 2rem ;
-} */
-
-.card {
-    border-radius: 0.5rem;
-    width: 350px;
-    max-width: 100%;
-    min-height: 250px;
-    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0px 5px 8px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 14px 0px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
-    background-image: url("../assets//images/innovation.png");
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-.info {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-color: #fff;
-    transform: translateY(100%)
-    translateY(-8px)
-    translateZ(0);
-    transition: transform 0.5s ease-out;
-  }
-  
-  .info:before {
-    z-index: -1;
-    display: block;
-    position: absolute;
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    .home-theme-container h2{
+        font-size: 27rem;
+    }
+    .home-theme-container p{
+        font-size: 9rem;
+    }
+    .home-theme-container p .home-theme-name{
+        font-size: 15rem;
+    }
+    .home-theme-container p .home-theme-span{
+        font-size: 9.3rem;
     
-    background-size: cover;
-    opacity: 0.25;
-    transform: translateY(-100%)
-    translateY(88px)
-    translateZ(0);
-    transition: transform 0.5s ease-out;
     }
-
-    .card:hover .info,
-    .card:hover .info:before {
-        transform: translateY(0) translateZ(0);
+}
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .home-theme-container h2{
+        font-size: 27rem;
     }
+    .home-theme-container p{
+        font-size: 9rem;
+    }
+    .home-theme-container p .home-theme-name{
+        font-size: 15rem;
+    }
+    .home-theme-container p .home-theme-span{
+        font-size: 9.3rem;
+    
+    }
+}
+@media only screen and (min-width: 1024px) {
 
-.title {
-    margin: 0;
-    padding: 24px;
-    font-size: 3rem;
-    line-height: 1;
-    color: rgba(0, 0, 0, 0.87);
+
+
 }
 
-  .description {
-    margin: 0;
-    padding: 0 24px 24px;
-    font-size: 2rem;
-    line-height: 1.5;
-  }
-  
 
-  @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
 
-  body,
-  header {
-    background: #fafafa
-  }
-  
-  header {
-    padding: 40px;
-    min-height: 200px;
-    text-align: center;
-    color: rgba(0, 0, 0, .87)
-  }
-  
-  header > * {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto
-  }
-  
-  header>:last-child {
-    margin-bottom: 0
-  }
-  
-  .card h1 {
-    margin-bottom: 0.5em;
-    font-weight: inherit;
-    line-height: 1.2;
-    color: #1c5b72;
-    font-size: 2.618em
-  }
-  
-  @media (min-width:800px) {
-    .card h1 {
-      font-size: 4.236em;
-      font-weight: 300
+
+.home-domains-heading h2{
+    font-family: "engschrift-caps" sans-serif  !important;
+    color: rgba(215, 218, 220,0.4);
+    font-size: 7.5rem;
+    letter-spacing: 2rem;
+    font-weight:300;
+}
+.home-domains-container{
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.home-domain-cards-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+}
+.home-domain-card {
+    width: 24%;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background: rgb(5, 6, 45);
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    padding: 1rem 0;
+    transition: transform 500ms ease;
+}
+.home-domain-card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.home-domain-card .domian-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-domain-card .domian-image img{
+    width: 75%;
+}
+.domain-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.domain-content h2{
+    width: max-content;
+    position: absolute;
+    bottom: -0.5rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+    padding-left: 2rem;
+    letter-spacing: 0.09rem;
+    transition: position 500ms ease;
+    color: #fffffe;
+}
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    .home-domains-heading h2{
+        font-size: 22rem;
     }
-  }
-  
-  .card p {
-    margin-bottom: 1.3em;
-    line-height: 1.618
-  }
-  
-  @media (min-width:800px) {
-    .card p {
-      font-size: 1.3em
+    .home-domain-card{
+        width: 80%;
+        margin: 2rem 0;
     }
-  }
-  
-  .card a {
-    color: #e03616;
-    text-decoration: none
-  }
-  
+    .domain-content h2{
+        font-size: 11rem;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .home-domains-heading h2{
+        font-size: 22rem;
+    }
+    .home-domain-card{
+        width: 80%;
+        margin: 2rem 0;
+    }
+    .domain-content h2{
+        font-size: 11rem;
+    }
+}
+@media only screen and (min-width: 1024px) {
+
+}
+
+
