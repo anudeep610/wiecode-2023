@@ -16,7 +16,7 @@ export default function Registration() {
     const user = useContext(userContext);
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(false)
-    const titles = ["Hola!😄 ", "Team Details❓", "Domain & Abstract🤔"];
+    const titles = ["", "Team Details❓", "Domain & Abstract🤔"];
     const [teamSize, setTeamSize] = useState(0);
     const [teamName, setTeamName] = useState("");
     const [domain, setDomain] = useState("");

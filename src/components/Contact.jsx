@@ -123,19 +123,19 @@ export default function Contact() {
                             <h1 className="contact-post">Chairman</h1>
                         </div>
                         <div className="contact-mobile-box">
-                            <h1 className="contact-mobile">9606416541</h1>
+                            <h1 className="contact-mobile">96064 16541</h1>
                         </div>
                     </div>
 
                     <div className="contact-card-box">
                         <div className="contact-name-box">
-                            <h1 className="contact-name">Shivraj Karjagi</h1>
+                            <h1 className="contact-name">Shivaraj Karjagi</h1>
                         </div>
                         <div className="contact-post-box">
                             <h1 className="contact-post">Vice Chairman</h1>
                         </div>
                         <div className="contact-mobile-box">
-                            <h1 className="contact-mobile">9743703243</h1>
+                            <h1 className="contact-mobile">97437 03243</h1>
                         </div>
                     </div>
 
@@ -147,7 +147,7 @@ export default function Contact() {
                             <h1 className="contact-post">Wie Chairman</h1>
                         </div>
                         <div className="contact-mobile-box">
-                            <h1 className="contact-mobile">8147382401</h1>
+                            <h1 className="contact-mobile">81473 82401</h1>
                         </div>
                     </div>
 
@@ -159,7 +159,7 @@ export default function Contact() {
                             <h1 className="contact-post">Wie Vice Chairman</h1>
                         </div>
                         <div className="contact-mobile-box">
-                            <h1 className="contact-mobile">9353559069</h1>
+                            <h1 className="contact-mobile">93535 59069</h1>
                         </div>
                     </div>
                 </div>

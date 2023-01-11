@@ -92,6 +92,7 @@
 .contact .contact-main-container .contact-card-box .contact-mobile{
     font-size: 3rem;
     padding: 0.5rem 0;
+    letter-spacing: 0.13rem;
 }
 
 @media only screen and (max-width:37.5em){
