@@ -16,11 +16,14 @@ import education from "../assets/images/doamins/Knowledge _Outline.svg"
 import urban from "../assets/images/doamins/New York City _Outline.svg"
 import ecomerce from "../assets/images/doamins/Online shopping _Outline.svg"
 import fintech from "../assets/images/doamins/Revenue _Outline (1).svg"
+import agri from "../assets/images/doamins/grain-rice-icon.svg";
+import environment from "../assets/images/doamins/trees-icon.svg"
 import nandini from "../assets/images/nandni.png";
 import csi from "../assets/images/csilogo.png";
 import first from "../assets/images/1st-prize-icon.svg";
 import second from "../assets/images/2nd-prize-icon.svg";
-import idea from "../assets/images/creative-idea-icon.svg";
+import idea from "../assets/images/idea-svgrepo-com2.svg";
+import women from "../assets/images/gold-medal-svgrepo-com.svg"
 
 //importing logos
 import ieee from "../assets/images/ieee-black.png"
@@ -49,6 +52,12 @@ function Home() {
     }
     const handleOpenInov = async () => {
         navigate("/open-inov-domain");
+    }
+    const handleEnv = async () => {
+        navigate("/");
+    }
+    const handleAgri = async () => {
+        navigate("/");
     }
     return (
         <>
@@ -148,15 +157,17 @@ function Home() {
                         <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> desinging solutions, coding on a <br /><span className='home-theme-span'>Theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
                     </div>
                     <div className="prizes-container">
-                        <div className="prizes-box">
+                    <div className="prizes-box">
                             <div className="prize-image">
-                                <img src={idea} alt="" />
+                                <img src={idea} className="icon" alt="" />
                             </div>
-                            <div className="prize-category">
-                                <h3 className='prize-category-text'>BEST IDEA</h3>
-                            </div>
-                            <div className="prize-amount">
-                                <h3 className='prize-amount-text'> 5000/- </h3>
+                            <div className="second-container">
+                                <div className="prize-category">
+                                    <h3 className='prize-category-text'> BEST IDEA</h3>
+                                </div>
+                                <div className="prize-amount">
+                                    <h3 className='prize-amount-text'> 5000/- </h3>
+                                </div>
                             </div>
                         </div>
 
@@ -164,11 +175,13 @@ function Home() {
                             <div className="prize-image">
                                 <img src={first} alt="" />
                             </div>
-                            <div className="prize-category">
-                                <h3 className='prize-category-text'>FIRST PLACE</h3>
-                            </div>
-                            <div className="prize-amount">
-                                <h3 className='prize-amount-text'> 15000/- </h3>
+                            <div className="second-container">
+                                <div className="prize-category">
+                                    <h3 className='prize-category-text'> FIRST PLACE</h3>
+                                </div>
+                                <div className="prize-amount">
+                                    <h3 className='prize-amount-text'> 15000/- </h3>
+                                </div>
                             </div>
                         </div>
 
@@ -176,23 +189,27 @@ function Home() {
                             <div className="prize-image">
                                 <img src={second} alt="" />
                             </div>
-                            <div className="prize-category">
-                                <h3 className='prize-category-text'>SECOND PLACE</h3>
-                            </div>
-                            <div className="prize-amount">
-                                <h3 className='prize-amount-text'> 10000/- </h3>
+                            <div className="second-container">
+                                <div className="prize-category">
+                                    <h3 className='prize-category-text'> SECOND PLACE</h3>
+                                </div>
+                                <div className="prize-amount">
+                                    <h3 className='prize-amount-text'> 10000/- </h3>
+                                </div>
                             </div>
                         </div>
 
                         <div className="prizes-box">
                             <div className="prize-image">
-                                <img src={first} alt="" />
+                                <img src={women} className="icon" alt="" />
                             </div>
-                            <div className="prize-category">
-                                <h3 className='prize-category-text'> WOMEN TEAM</h3>
-                            </div>
-                            <div className="prize-amount">
-                                <h3 className='prize-amount-text'> 5000/- </h3>
+                            <div className="second-container">
+                                <div className="prize-category">
+                                    <h3 className='prize-category-text'> WOMEN TEAM</h3>
+                                </div>
+                                <div className="prize-amount">
+                                    <h3 className='prize-amount-text'> 5000/- </h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -258,6 +275,28 @@ out activities or customs, practices and policies.</p> */}
                                 <div className="domain-content">
                                     <h2>Fintech</h2>
                                     {/* <p>Fintech is a company/business that uses technology to automate, enhance or modify financial services for other consumers.</p> */}
+                                </div>
+                            </div>
+                            <div
+                                onClick={handleEnv}
+                                className="home-domain-card">
+                                <div className="domian-image">
+                                    <img src={environment} alt="" />
+                                </div>
+                                <div className="domain-content">
+                                    <h2>Environment</h2>
+                                    {/* <p>There are a number of fields where the dynamics between a producer and consumer can be elementary therefore not causing complications.</p> */}
+                                </div>
+                            </div>
+                            <div
+                                onClick={handleAgri}
+                                className="home-domain-card">
+                                <div className="domian-image">
+                                    <img src={agri} alt="" />
+                                </div>
+                                <div className="domain-content">
+                                    <h2>Agriculture</h2>
+                                    {/* <p>There are a number of fields where the dynamics between a producer and consumer can be elementary therefore not causing complications.</p> */}
                                 </div>
                             </div>
                             <div

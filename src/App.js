@@ -12,7 +12,9 @@ import SmartEducation from './routes/domains/smartEducation';
 import Urbanization from "./routes/domains/urbanization";
 import Fintech from "./routes/domains/fintech";
 import Ecomerce from "./routes/domains/ecomerce.jsx";
-import OpenInov from "./routes/domains/openInov"
+import OpenInov from "./routes/domains/openInov";
+import Agriculture from './routes/domains/agriculture';
+import Environment from './routes/domains/environment';
 import PageNotFound from './components/PageNotFound';
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
         <Route path='/fintech-domain' element={<Fintech/>}/>
         <Route path='/ecomerce-domain' element={<Ecomerce/>}/>
         <Route path='/open-inov-domain' element={<OpenInov/>}/>
+        <Route path='/agriculture-domain' element={<Agriculture/>}/>
+        <Route path='/environment-domain' element={<Environment/>}/>
 
         <Route path='*' element={<PageNotFound/>}/>
       </Routes>
