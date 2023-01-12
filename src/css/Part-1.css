@@ -34,9 +34,9 @@
 
 .part-1-main-container .abstract-container{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width:60%;
+    justify-content: space-between;
+    align-items: center;
+    width:50%;
 }
 
 .part-1-main-container .abstract-container .abstract-text{
@@ -48,9 +48,25 @@
 
 .part-1-main-container .abstract-container a{
     font-size: 3rem;
-    color: red;
+    color: white;
     text-decoration: none;
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    font-family: 'Inconsolata', monospace !important;
+    font-size: 2.5rem;
+    letter-spacing: 0.09rem;
+    font-weight: 500;
+    /* height: 5rem; */
+    padding: 1.5rem 2rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
 }
+.part-1-main-container .abstract-container a:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+    }
 
 .part-1-main-container .abstract-container .upload{
     width: 100%;
@@ -124,5 +140,9 @@
     }
     .part-1-main-container .abstract-container{
         width:100%;
+    }
+    .part-1-main-container .abstract-container a{
+        font-size: 5.5rem;
+        padding: 2rem ;
     }
 }

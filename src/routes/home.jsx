@@ -9,6 +9,7 @@ import {RxHamburgerMenu} from "react-icons/rx"
 import {FaTimes} from "react-icons/fa"
 //importing the Link from recat router
 import {Link, useNavigate} from "react-router-dom"
+//domains images
 import innovation from "../assets/images/doamins/Innovation _Outline.svg"
 import healthCare from "../assets/images/doamins/Health _Outline.svg"
 import education from "../assets/images/doamins/Knowledge _Outline.svg"
@@ -26,6 +27,24 @@ function Home() {
         navigate("/registration")
     }
     const [showNavLinks, setshowNavLinks] = useState(false)
+    const handleHealthCare = async()=>{
+        navigate("/health-care-domain")
+    }
+    const handleEducation = async()=>{
+        navigate("/smart-edu-domain");
+    }
+    const handleUrban = async()=>{
+        navigate("/urbanization-domain");
+    }
+    const handleFintech = async()=>{
+        navigate("/fintech-domain");
+    }
+    const handleEcomerce = async()=>{
+        navigate("/ecomerce-domain");
+    }
+    const handleOpenInov = async()=>{
+        navigate("/ecomerce-domain");
+    }
     return (
         <>
             <div className="home-main-container">
@@ -121,33 +140,41 @@ function Home() {
                 <div className="home-hackathon-contents">
                     <div className="home-theme-container">
                         <h2>IDEA</h2>
-                        <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> desiging solutions, coding on a <br /><span className='home-theme-span'>theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
+                        <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> desinging solutions, coding on a <br /><span className='home-theme-span'>Theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
                     </div>
                     <div className="home-domains-container">
                         <div className="home-domains-heading">
                             <h2>DOMAINS</h2>
                         </div>
-                        <div className="home-domain-cards-container">
-                            <div className="home-domain-card">
+                        <div 
+                            
+                            className="home-domain-cards-container">
+                            <div 
+                                onClick={handleHealthCare}
+                                className="home-domain-card">
                                 <div className="domian-image">
                                     <img src={healthCare} alt="" />
                                 </div>
                                 <div className="domain-content">
-                                    <h2>Health care</h2>
+                                    <h2>Healthcare</h2>
                                     {/* <p>Healthcare industry has vigorously boomed in the last couple of years. Considering the dependency, the patients are consumers of hospitals/clinics/pharmacies, to enhance or 
                                         create a favourable and secure environment is essential.</p> */}
                                 </div>
                             </div>
-                            <div className="home-domain-card">
+                            <div 
+                                onClick={handleEducation}
+                                className="home-domain-card">
                                 <div className="domian-image">
                                     <img src={education} alt="" />
                                 </div>
                                 <div className="domain-content">
-                                    <h2>Educational</h2>
+                                    <h2>Smart Education</h2>
                                     {/* <p>The country is developing but the literacy rate has to improve on a vast scale as well. Education is available but the quality is not up to the mark, it is not reaching every nook and corner of the country.</p> */}
                                 </div>
                             </div>
-                            <div className="home-domain-card">
+                            <div 
+                                onClick={handleUrban}
+                                className="home-domain-card">
                                 <div className="domian-image">
                                     <img src={urban} alt="" />
                                 </div>
@@ -157,7 +184,9 @@ function Home() {
 out activities or customs, practices and policies.</p> */}
                                 </div>
                             </div>
-                            <div className="home-domain-card">
+                            <div 
+                                onClick={handleEcomerce}
+                                className="home-domain-card">
                                 <div className="domian-image">
                                     <img src={ecomerce} alt="" />
                                 </div>
@@ -166,7 +195,9 @@ out activities or customs, practices and policies.</p> */}
                                     {/* <p>E commerce is a basic exchange of goods, services over the internet. It consists of various forms b2b ,b2c or c2c e-commerce. This has been a booming industry as urbanisation kept on improving.</p> */}
                                 </div>
                             </div>
-                            <div className="home-domain-card">
+                            <div
+                                onClick={handleFintech}
+                                className="home-domain-card">
                                 <div className="domian-image">
                                     <img src={fintech} alt="" />
                                 </div>
@@ -175,7 +206,9 @@ out activities or customs, practices and policies.</p> */}
                                     {/* <p>Fintech is a company/business that uses technology to automate, enhance or modify financial services for other consumers.</p> */}
                                 </div>
                             </div>
-                            <div className="home-domain-card">
+                            <div 
+                                onClick={handleOpenInov}
+                                className="home-domain-card">
                                 <div className="domian-image">
                                     <img src={innovation} alt="" />
                                 </div>
