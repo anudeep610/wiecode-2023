@@ -17,7 +17,10 @@ import urban from "../assets/images/doamins/New York City _Outline.svg"
 import ecomerce from "../assets/images/doamins/Online shopping _Outline.svg"
 import fintech from "../assets/images/doamins/Revenue _Outline (1).svg"
 import nandini from "../assets/images/nandni.png";
-import csi from "../assets/images/csilogo.png"
+import csi from "../assets/images/csilogo.png";
+import first from "../assets/images/1st-prize-icon.svg";
+import second from "../assets/images/2nd-prize-icon.svg";
+import idea from "../assets/images/creative-idea-icon.svg";
 
 //importing logos
 import ieee from "../assets/images/ieee-black.png"
@@ -143,6 +146,55 @@ function Home() {
                     <div className="home-theme-container">
                         <h2>IDEA</h2>
                         <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> desinging solutions, coding on a <br /><span className='home-theme-span'>Theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
+                    </div>
+                    <div className="prizes-container">
+                        <div className="prizes-box">
+                            <div className="prize-image">
+                                <img src={idea} alt="" />
+                            </div>
+                            <div className="prize-category">
+                                <h3 className='prize-category-text'>BEST IDEA</h3>
+                            </div>
+                            <div className="prize-amount">
+                                <h3 className='prize-amount-text'> 5000/- </h3>
+                            </div>
+                        </div>
+
+                        <div className="prizes-box">
+                            <div className="prize-image">
+                                <img src={first} alt="" />
+                            </div>
+                            <div className="prize-category">
+                                <h3 className='prize-category-text'>FIRST PLACE</h3>
+                            </div>
+                            <div className="prize-amount">
+                                <h3 className='prize-amount-text'> 15000/- </h3>
+                            </div>
+                        </div>
+
+                        <div className="prizes-box">
+                            <div className="prize-image">
+                                <img src={second} alt="" />
+                            </div>
+                            <div className="prize-category">
+                                <h3 className='prize-category-text'>SECOND PLACE</h3>
+                            </div>
+                            <div className="prize-amount">
+                                <h3 className='prize-amount-text'> 10000/- </h3>
+                            </div>
+                        </div>
+
+                        <div className="prizes-box">
+                            <div className="prize-image">
+                                <img src={first} alt="" />
+                            </div>
+                            <div className="prize-category">
+                                <h3 className='prize-category-text'> WOMEN TEAM</h3>
+                            </div>
+                            <div className="prize-amount">
+                                <h3 className='prize-amount-text'> 5000/- </h3>
+                            </div>
+                        </div>
                     </div>
                     <div className="home-domains-container">
                         <div className="home-domains-heading">
