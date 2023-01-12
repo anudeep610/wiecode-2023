@@ -16,6 +16,8 @@ import education from "../assets/images/doamins/Knowledge _Outline.svg"
 import urban from "../assets/images/doamins/New York City _Outline.svg"
 import ecomerce from "../assets/images/doamins/Online shopping _Outline.svg"
 import fintech from "../assets/images/doamins/Revenue _Outline (1).svg"
+import nandini from "../assets/images/nandni.png";
+import csi from "../assets/images/csilogo.png"
 
 //importing logos
 import ieee from "../assets/images/ieee-black.png"
@@ -224,7 +226,7 @@ out activities or customs, practices and policies.</p> */}
                 </div>
                 <div className="home-rules-container">
                     <div className="rules-container">
-                        <h2>RULES & REGULATIONS</h2>
+                        <h2 className='heading'>RULES & REGULATIONS</h2>
                         <div className="rules-box">
                             <ul className='rules-box-list'>
                                 <li className='rule'> The hackathon is of 12 hours.</li>
@@ -237,8 +239,7 @@ out activities or customs, practices and policies.</p> */}
                                     proposed. </li>
                                 <li className='rule'> A mentor for renowned industries will be allotted to each team who will guide them
                                     throughout the competition. </li>
-                                <li className='rule'> Teams must present their ideas to respective mentors at 3 check points and progress will
-                                    be evaluated based on that presentation.
+                                <li className='rule'> Teams must present their ideas to respective mentors at 3 check points and progress will be evaluated based on judging criteria.
                                 </li>
                                 <li className='rule'> Every team must disclose their team name as well as team leader’s name (girl team
                                     leader) at the time of registration. No hardware kit will be provided.
@@ -258,11 +259,24 @@ out activities or customs, practices and policies.</p> */}
                                 </li>
                                 <li className='rule'> Only 40% of pre-cooked code is permissible.</li>
                                 <li className='rule'> Lunch and snacks facility will be provided.</li>
-
                             </ul>
                         </div>
                     </div>
+                    <div className="sponsorship-container-box">
+                        <div className="sponsership-heading">
+                            <h2>SPONSORED BY</h2>
+                        </div>
+                        <div className="sponsership-box">
+                            <div className="image-box">
+                                <img classname="logo" src={nandini} alt="nandini" />
+                            </div>
+                            <div className="image-box">
+                                <img classname="logo" src={csi} alt="csi" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <Footer />
             </div>
         </>

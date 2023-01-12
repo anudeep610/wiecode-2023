@@ -989,6 +989,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 12rem 10rem;
+    padding-bottom: 5rem;
     color: rgba(256, 256, 256, 0.6);
 }
 
@@ -1001,7 +1002,7 @@
     padding: 2rem 0;
 }
 
-.home-rules-container h2 {
+.home-rules-container h2.heading {
     margin: 1.25rem auto;
     font-size: 3.25rem;
     color: #7ADFD1;
@@ -1022,7 +1023,7 @@
 }
 
 @media only screen and (max-width: 37.5em) {
-    .home-rules-container h2 {
+    .home-rules-container h2.heading {
         margin: 3rem auto;
         font-size: 6rem;
     }
@@ -1037,7 +1038,7 @@
 }
 
 @media only screen and (max-width: 20em) {
-    .home-rules-container h2 {
+    .home-rules-container h2.heading {
         margin: 5rem auto;
         font-size: 7rem;
     }
@@ -1048,5 +1049,75 @@
 
     .home-rules-container .rules-box .rules-box-list{
         padding: 0 10rem;
+    }
+}
+
+.sponsorship-container-box{
+    padding:8rem 4rem;
+    padding-bottom: 4rem;
+}
+
+.sponsorship-container-box .sponsership-heading h2{
+    font-size: 4rem;
+    color: #7ADFD1;
+    letter-spacing: 1.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.sponsorship-container-box .sponsership-box{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsorship-container-box .sponsership-box .image-box{
+    /* width: 50rem; */
+    padding: 3rem 8rem;
+    display: flex;
+    justify-content: center;
+    flex-basis: 50rem;
+}
+
+.sponsership-box .image-box img{
+    width: 80%;
+    height: auto;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .sponsorship-container-box{
+        padding:20rem 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .sponsorship-container-box .sponsership-box{
+        flex-direction: column;
+    }
+
+    .sponsorship-container-box .sponsership-heading h2{
+        font-size: 10rem;
+        letter-spacing: 2.5rem;
+        padding: 5rem 0;
+    }
+
+    .sponsership-box .image-box img{
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 20em) {
+    .sponsorship-container-box{
+        padding:20rem 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .sponsorship-container-box .sponsership-heading h2{
+        font-size: 11rem;
+        letter-spacing: 2.5rem;
+        padding: 5rem 0;
     }
 }
