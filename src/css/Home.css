@@ -986,7 +986,8 @@
 
 .home-rules-container {
     background-image: url("../assets/images/line4.png");
-    /* margin: 0 15rem; */
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 12rem 10rem;
     color: rgba(256, 256, 256, 0.6);
 }
