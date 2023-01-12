@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiFillInstagram, AiOutlineCopyrightCircle, AiOutlineYoutube, AiFillLinkedin} from "react-icons/ai";
-import { FaFacebookF } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 import "../css/Footer.css";
 
 
@@ -33,8 +33,14 @@ export default function Footer() {
                         </span>
 
                         <span className="icon-logo">
-                            <a href="https://www.linkedin.com/company/ieee-sit-student-branch/">
+                            <a href="https://www.linkedin.com/company/ieee-sit-student-chapter/">
                                 <AiFillLinkedin className='icon'/>
+                            </a>
+                        </span>
+
+                        <span className="icon-logo">
+                            <a href="https://t.me/ieeesitsb">
+                                <FaTelegramPlane className='icon'/>
                             </a>
                         </span>
                     </div>
