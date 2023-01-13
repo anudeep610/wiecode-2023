@@ -1,7 +1,12 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 .footer .footer-main-container{
     background-color: black;
-    padding: 1rem 20rem;
+    padding: 1rem 15rem;
     display: flex;
     justify-content: space-between;
 }
@@ -24,6 +29,11 @@
     font-size: 2.5rem;
 }
 
+.footer .social-container{
+    display: flex;
+    align-items: center;
+}
+
 .footer .footer-main-container .icon-logo{
     font-size: 3rem;
     display: flex;
@@ -40,20 +50,20 @@
 
 @media only screen and (max-width:25em){
     .footer .footer-main-container .icon-logo .icon{
-        font-size: 5rem;
+        font-size: 6rem;
     }
 
     .footer .footer-main-container .copyright-text{
-        font-size: 4rem;
+        font-size: 5rem;
     }
 }
 
 @media only screen and (max-width:20em){
     .footer .footer-main-container .icon-logo .icon{
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .footer .footer-main-container .copyright-text{
-        font-size: 3rem;
+        font-size: 4rem;
     }
 }

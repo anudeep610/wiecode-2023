@@ -3,16 +3,22 @@ import { useNavigate, Link } from "react-router-dom";
 import userContext from "../utils/context";
 import axios from "../axios/axios";
 import "../css/Registration.css";
-import wieLogo from "../assets/images/WIELogo-removebg-preview.png"
+import ieee from "../assets/images/logos/IEEE-WHITE.png";
+import ieeeBlr from "../assets/images/logos/ieee-blr.png"
+import wieLogo from "../assets/images/logos/WIELogo-removebg-preview.png"
 import Part1 from "../components/forms/Part-1";
 import Part2 from "../components/forms/Part-2";
 import Part3 from "../components/forms/Part-3";
 import Loader from "../components/loader";
 import Footer from './Footer';
 
+import { RxHamburgerMenu } from "react-icons/rx"
+import { FaTimes } from "react-icons/fa"
+
 export default function Registration() {
 
     const navigate = useNavigate();
+    const [showNavLinks, setshowNavLinks] = useState(false)
     const user = useContext(userContext);
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(false)
@@ -22,6 +28,7 @@ export default function Registration() {
     const [domain, setDomain] = useState("");
     const [teamDetails, setTeamDetails] = useState([]);
     const [abstract, setAbstract] = useState();
+    const [refferal, setReferral] = useState();
 
     const handleSubmit = async () => {
         setLoading(true);
@@ -30,6 +37,7 @@ export default function Registration() {
         form.append('teamSize', teamSize);
         form.append('domain', domain);
         form.append('teamName', teamName);
+        form.append('referral',refferal)
         form.append('teamDetails', JSON.stringify(teamDetails));
         console.log(teamDetails, teamSize, teamName, domain, abstract);
         const res = await axios.post("/register", form, {
@@ -54,7 +62,7 @@ export default function Registration() {
         else if (page === 1 && !loading)
             return <Part2 setTeamDetails={setTeamDetails} teamDetails={teamDetails} />
         else if (page === 2 && !loading)
-            return <Part3 setDomain={setDomain} setAbstract={setAbstract} />
+            return <Part3 setDomain={setDomain} setAbstract={setAbstract} setReferral={setReferral} />
         else if (loading)
             return <Loader />
     }
@@ -123,19 +131,53 @@ export default function Registration() {
         <userContext.Provider value={{ teamSize: teamSize }}>
             <div className="registration">
                 <div className="registration-main-container">
-                    <div className="home-navabar-wrapper">
-                        <div className="home-navabar-container">
-                            <div className="home-wie-logo-container">
-                                <img src={wieLogo} alt="" />
-                            </div>
-                            <ul className='home-unodered-list'>
-                                <li><Link to="/"><p>Home</p></Link></li>
-                                <li><Link to="/registration"><p>Registration</p></Link></li>
-                                <li><Link to="/contact"><p>Contact Us</p></Link></li>
+                <div className="home-navabar-wrapper">
+                    <div className="home-navabar-container">
+                        <div className="home-wie-logo-container">
+                            <img src={ieee} className="img1" alt="" />
+                            <img src={ieeeBlr} className="img1" alt="" />
+                            <img src={wieLogo} className="img2" alt="" />
+                        </div>
+                        <ul
 
-                            </ul>
+                            className={showNavLinks ? "mobile-navbar" : ''}>
+                            <li><Link to="/"><p>Home</p></Link></li>
+                            <li><Link to="/registration"><p>Registration</p></Link></li>
+                            <li><Link to="/contact"><p>Contact Us</p></Link></li>
+
+                        </ul>
+                        {/* <div className="home-hamburger">
+                                <button
+                                    onClick={()=>setshowNavLinks(true)}
+                                >{showNavLinks?
+                                    <FaTimes size={30} color="#fff"/>
+                                :
+                                    
+                                    <RxHamburgerMenu size={30} color="#fff"/>}
+                                </button>
+                            </div> */}
+                    </div>
+                    <div className="mobile-nav-bar">
+                        <ul
+
+                            className={showNavLinks ? "mobile-navbar" : 'display-none'}>
+                            <li><Link to="/"><p>Home</p></Link></li>
+                            <li><Link to="/registration"><p>Registration</p></Link></li>
+                            <li><Link to="/contact"><p>Contact Us</p></Link></li>
+
+                        </ul>
+                        <div className="home-hamburger">
+                            <button
+                                onClick={() => setshowNavLinks(!showNavLinks)}
+                            >{showNavLinks ?
+                                <FaTimes size={40} color="#fff" />
+                                :
+
+                                <RxHamburgerMenu size={40} color="#fff" />}
+                            </button>
                         </div>
                     </div>
+                </div>
                     <div className="heading-container">
                         <h1 className="heading-text">REGISTER</h1>
                     </div>

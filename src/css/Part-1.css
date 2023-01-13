@@ -147,3 +147,31 @@
         padding: 2rem ;
     }
 }
+
+@media only screen and (max-width:25em){
+    .part-1-main-container .drop-down-container .label{
+        font-size: 8.5rem;
+    }
+    .part-1-main-container .abstract-container .abstract-text{
+        font-size: 8.5rem;
+    }
+    .part-1-main-container .drop-down-container #size{
+        font-size:7.5rem;
+    }
+    .part-1-main-container .input-container-box .input-container .label{
+        font-size: 8.5rem;
+    }
+    .part-1-main-container .input-container-box .input-container .input-box{
+        font-size:7.5rem;
+    }
+    .part-1-main-container .input-container-box .input-container-heading{
+        font-size: 8.5rem;
+    }
+    .part-1-main-container .abstract-container .upload{
+        font-size: 8.5rem;
+    }
+    .part-1-main-container .abstract-container a{
+        font-size: 6.5rem;
+        padding: 3rem ;
+    }
+}

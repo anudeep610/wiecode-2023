@@ -1,3 +1,7 @@
+.contact{
+    position: relative;
+}
+
 .contact .contact-main-container{
     min-height:100vh;
     padding: 0 5rem 8rem 5rem;

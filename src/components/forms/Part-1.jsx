@@ -26,7 +26,7 @@ export default function Part(props) {
         </Form.Select>
       </Form.Group>
       <Form.Group className="abstract-container">
-        <p className='abstract-text'> Sample Abstract :</p>
+        <p className='abstract-text'> Abstract Format (Must strictly be followed):</p>
         <a href="https://docs.google.com/document/d/1rbljprsyUYE1Y8nNQO5Kh3DFrjILUE3t/edit?usp=sharing&ouid=101729110658745518569&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Abstract</a>
       </Form.Group>
     </Form>

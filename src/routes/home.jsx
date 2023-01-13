@@ -26,7 +26,8 @@ import idea from "../assets/images/idea-svgrepo-com2.svg";
 import women from "../assets/images/gold-medal-svgrepo-com.svg"
 
 //importing logos
-import ieee from "../assets/images/ieee-black.png"
+import ieee from "../assets/images/logos/IEEE-WHITE.png"
+import ieeeBlr from "../assets/images/logos/ieee-blr.png"
 //importing wie logo
 import wieLogo from "../assets/images/logos/WIELogo-removebg-preview.png"
 function Home() {
@@ -54,20 +55,21 @@ function Home() {
         navigate("/open-inov-domain");
     }
     const handleEnv = async () => {
-        navigate("/");
+        navigate("/environment-domain");
     }
     const handleAgri = async () => {
-        navigate("/");
+        navigate("/agriculture-domain");
     }
     return (
-        <>
+        <div className='full-page-container'>
             <div className="home-main-container">
                 <div className="home-landing-bg-container">
                     <div className="home-navabar-wrapper">
                         <div className="home-navabar-container">
                             <div className="home-wie-logo-container">
-                                <img src={wieLogo} alt="" />
-                                <img src={ieee} alt="" />
+                                <img src={ieee} className="img1" alt="" />
+                                <img src={ieeeBlr} className="img1" alt="" />
+                                <img src={wieLogo} className="img2" alt="" />
                             </div>
                             <ul
 
@@ -130,7 +132,15 @@ function Home() {
 
                             </div>
                         </div>
-                        {/* <div className="home-content-col2">
+                    </div>
+                </div>
+                <div className="home-hackathon-contents">
+                    <div className="theme-container-box">
+                        <div className="home-theme-container">
+                            <h2>IDEA</h2>
+                            <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> designing solutions, coding on a <br /><span className='home-theme-span'>Theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
+                        </div>
+                        <div className="home-content-col2">
                             <div className="home-contant-row1">
                                 <div className="home-content-r1c1">
                                     <div><p>January</p></div>
@@ -142,22 +152,17 @@ function Home() {
                                 </div>
                             </div>
                             <div className="home-contant-row2">
-                                <h2>Tumakuru</h2>
+                                <h2>8:00 AM - 8:00 PM</h2>
                             </div>
                             <div className="home-contant-row3">
                                 <div><p>Venue</p></div>
-                                <div><h3>SIT Tumakuru</h3></div>
+                                {/* <div><p>(click for location details)</p></div> */}
+                                <div><h3> <a href="https://goo.gl/maps/wCixTh9uMtYdn8tb8" target="_blank"> SIT Tumakuru </a> </h3></div>
                             </div>
-                        </div> */}
-                    </div>
-                </div>
-                <div className="home-hackathon-contents">
-                    <div className="home-theme-container">
-                        <h2>IDEA</h2>
-                        <p>Come join us for a 12 hours hackathon <br />of brainstroming, inspiration,<br /> desinging solutions, coding on a <br /><span className='home-theme-span'>Theme</span><span className='home-theme-name'> Consumer at Ease.</span></p>
+                        </div>
                     </div>
                     <div className="prizes-container">
-                    <div className="prizes-box">
+                        <div className="prizes-box">
                             <div className="prize-image">
                                 <img src={idea} className="icon" alt="" />
                             </div>
@@ -281,7 +286,7 @@ out activities or customs, practices and policies.</p> */}
                                 onClick={handleEnv}
                                 className="home-domain-card">
                                 <div className="domian-image">
-                                    <img src={environment} alt="" />
+                                    <img src={environment} style={{ width: "75%" }} alt="" />
                                 </div>
                                 <div className="domain-content">
                                     <h2>Environment</h2>
@@ -292,7 +297,7 @@ out activities or customs, practices and policies.</p> */}
                                 onClick={handleAgri}
                                 className="home-domain-card">
                                 <div className="domian-image">
-                                    <img src={agri} alt="" />
+                                    <img src={agri} style={{ width: "75%" }} alt="" />
                                 </div>
                                 <div className="domain-content">
                                     <h2>Agriculture</h2>
@@ -322,13 +327,13 @@ out activities or customs, practices and policies.</p> */}
                             <ul className='rules-box-list'>
                                 <li className='rule'> The hackathon is of 12 hours.</li>
                                 <li className='rule'> Online registrations will be closed on 15th January 2023. </li>
-                                <li className='rule'> Team should either have 2(all girls team), 3 (min 1 girl in the team) or 4 members(min 2 girls in the team).</li>
+                                <li className='rule'> Team should either have 2 members (all girls team), 3 (min 1 girl in the team) or 4 members (min 2 girls in the team).</li>
                                 <li className='rule'> Each member should provide their details at the time of registration. </li>
-                                <li className='rule'> An abstract of about 500 words must be submitted by each team. </li>
+                                <li className='rule'> An abstract in the format specified ( https://bit.ly/3CNPi9b ) should be submitted by the team. </li>
                                 <li className='rule'> A team is allowed to submit solutions to multiple problems; however, a team if
                                     selected will be selected for the one best solution out of the all solutions they have
                                     proposed. </li>
-                                <li className='rule'> A mentor for renowned industries will be allotted to each team who will guide them
+                                <li className='rule'> A mentor from renowned industries will be allotted to each team who will guide them
                                     throughout the competition. </li>
                                 <li className='rule'> Teams must present their ideas to respective mentors at 3 check points and progress will be evaluated based on judging criteria.
                                 </li>
@@ -337,8 +342,8 @@ out activities or customs, practices and policies.</p> */}
                                 </li>
                                 <li className='rule'> There will be a limit on the number of entries accepted for each problem statement.</li>
                                 <li className='rule'> We would consider the first 6 entries for each problem statements for the first round
-                                    of screening. The WiE Code will begin on 12th October 2019 8:00 AM and will end at
-                                    12th October 2019 8:00 PM. Internet facility will be provided for 12 hours.
+                                    of screening. The WiE Code will begin on 21st January 2023 8:00 AM and will end at
+                                    21st January 2023 8:00 PM. Internet facility will be provided for 12 hours.
                                 </li>
                                 <li className='rule'> Reporting time will be 7:00 am. </li>
                                 <li className='rule'> All communication will be sent to your primary email submitted at the time of
@@ -368,9 +373,9 @@ out activities or customs, practices and policies.</p> */}
                     </div>
                 </div>
 
-                <Footer />
             </div>
-        </>
+            <Footer />
+        </div>
     )
 }
 

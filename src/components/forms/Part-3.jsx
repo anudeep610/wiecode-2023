@@ -22,6 +22,10 @@ export default function Part(props) {
         <Form.Label className='abstract-text'> Upload File :</Form.Label>
         <Form.Control className='upload' required type="file" onChange={(e)=>props.setAbstract(e.target.files[0])}/>
       </Form.Group>
+      <Form.Group className="drop-down-container">
+        <Form.Label className='label'> Refferal Code :</Form.Label>
+        <Form.Control id='size' required type="text" onChange={(e)=>props.setReferral(e.target.value)}/>
+      </Form.Group>
     </Form>
   )
 }

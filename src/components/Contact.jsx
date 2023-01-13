@@ -4,13 +4,19 @@ import Footer from './Footer';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Loader from "./loader";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import wieLogo from "../assets/images/WIELogo-removebg-preview.png"
+import ieee from "../assets/images/logos/IEEE-WHITE.png";
+import ieeeBlr from "../assets/images/logos/ieee-blr.png"
+import wieLogo from "../assets/images/logos/WIELogo-removebg-preview.png"
+
+import { RxHamburgerMenu } from "react-icons/rx"
+import { FaTimes } from "react-icons/fa"
 
 export default function Contact() {
 
     const [loading, setLoading] = useState(false);
+    const [showNavLinks, setshowNavLinks] = useState(false)
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -70,14 +76,48 @@ export default function Contact() {
                 <div className="home-navabar-wrapper">
                     <div className="home-navabar-container">
                         <div className="home-wie-logo-container">
-                            <img src={wieLogo} alt="" />
+                            <img src={ieee} className="img1" alt="" />
+                            <img src={ieeeBlr} className="img1" alt="" />
+                            <img src={wieLogo} className="img2" alt="" />
                         </div>
-                        <ul className='home-unodered-list'>
+                        <ul
+
+                            className={showNavLinks ? "mobile-navbar" : ''}>
                             <li><Link to="/"><p>Home</p></Link></li>
                             <li><Link to="/registration"><p>Registration</p></Link></li>
                             <li><Link to="/contact"><p>Contact Us</p></Link></li>
 
                         </ul>
+                        {/* <div className="home-hamburger">
+                                <button
+                                    onClick={()=>setshowNavLinks(true)}
+                                >{showNavLinks?
+                                    <FaTimes size={30} color="#fff"/>
+                                :
+                                    
+                                    <RxHamburgerMenu size={30} color="#fff"/>}
+                                </button>
+                            </div> */}
+                    </div>
+                    <div className="mobile-nav-bar">
+                        <ul
+
+                            className={showNavLinks ? "mobile-navbar" : 'display-none'}>
+                            <li><Link to="/"><p>Home</p></Link></li>
+                            <li><Link to="/registration"><p>Registration</p></Link></li>
+                            <li><Link to="/contact"><p>Contact Us</p></Link></li>
+
+                        </ul>
+                        <div className="home-hamburger">
+                            <button
+                                onClick={() => setshowNavLinks(!showNavLinks)}
+                            >{showNavLinks ?
+                                <FaTimes size={40} color="#fff" />
+                                :
+
+                                <RxHamburgerMenu size={40} color="#fff" />}
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="heading-container">
@@ -144,7 +184,7 @@ export default function Contact() {
                             <h1 className="contact-name">Prakruthi C</h1>
                         </div>
                         <div className="contact-post-box">
-                            <h1 className="contact-post">Wie Chairman</h1>
+                            <h1 className="contact-post">WIE Chairman</h1>
                         </div>
                         <div className="contact-mobile-box">
                             <h1 className="contact-mobile">81473 82401</h1>
@@ -156,7 +196,7 @@ export default function Contact() {
                             <h1 className="contact-name">Sneha N</h1>
                         </div>
                         <div className="contact-post-box">
-                            <h1 className="contact-post">Wie Vice Chairman</h1>
+                            <h1 className="contact-post">WIE Vice Chairman</h1>
                         </div>
                         <div className="contact-mobile-box">
                             <h1 className="contact-mobile">93535 59069</h1>
