@@ -33,6 +33,7 @@ function OpenInov() {
                             className={showNavLinks ? "mobile-navbar" : ''}>
                             <li><Link to="/"><p>Home</p></Link></li>
                             <li><Link to="/registration"><p>Registration</p></Link></li>
+                            <li><Link to="/about"><p>About Us</p></Link></li>
                             <li><Link to="/contact"><p>Contact Us</p></Link></li>
 
                         </ul>
@@ -53,6 +54,7 @@ function OpenInov() {
                             className={showNavLinks ? "mobile-navbar" : 'display-none'}>
                             <li><Link to="/"><p>Home</p></Link></li>
                             <li><Link to="/registration"><p>Registration</p></Link></li>
+                            <li><Link to="/about"><p>About Us</p></Link></li>
                             <li><Link to="/contact"><p>Contact Us</p></Link></li>
 
                         </ul>
