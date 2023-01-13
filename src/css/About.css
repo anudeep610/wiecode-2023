@@ -1,0 +1,112 @@
+.about{
+    position: relative;
+}
+
+.about .about-main-container{
+    min-height: 100vh;
+    padding: 0 5rem 8rem 5rem;
+    background-image: url("../assets/images/both.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.about .about-main-container .about-paras-container{
+    width:85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.about .about-main-container .about-paras-container .about-para-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.5);
+    padding: 2rem 3rem;
+    background-color: rgba(215, 218, 220, 0.4);
+    margin: 3rem 0;
+}
+
+.about .about-main-container .about-paras-container .about-para-container .about-para-heading-container{
+    margin: 3rem auto;
+}
+
+.about .about-main-container .about-paras-container .about-para-container .about-para-heading-container h2{
+    font-size:5rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    color: #7ADFD1;
+}
+
+.about .about-main-container .about-paras-container .about-para-container .about-para-container{
+    margin: 2rem auto;
+}
+
+.about .about-main-container .about-paras-container .about-para-container .about-para{
+    color: #fffffe;
+    font-size: 2.1rem;
+    font-family: 'Inconsolata', monospace !important;
+    text-align: justify;
+}
+
+@media screen and (max-width:37.5em){
+
+    .about .about-main-container .about-paras-container{
+        width:90%;
+    }
+
+    .about .about-main-container .about-paras-container .about-para-container .about-para-heading-container h2{
+        font-size:7rem;
+    }
+
+    .about .about-main-container .about-paras-container .about-para-container .about-para{
+        font-size: 4rem;
+    }
+
+    .about .about-main-container .about-paras-container .about-para-container .about-para-container{
+        margin: 4rem auto;
+        padding: 6rem;
+    }
+
+    .about .about-main-container .about-paras-container {
+        margin: 4rem auto;
+        padding: 6rem;
+    }
+
+    .about .about-main-container .about-paras-container .about-para-container{
+        padding: 2rem 6rem;
+        margin: 3rem 0;
+    }
+}
+
+@media screen and (max-width:25em){
+
+    .about .about-main-container .about-paras-container{
+        width:100%;
+    }
+
+    .about .about-main-container .about-paras-container .about-para-container .about-para-heading-container h2{
+        font-size:8rem;
+    }
+
+    .about .about-main-container .about-paras-container .about-para-container .about-para{
+        font-size: 5rem;
+    }
+
+    .about .about-main-container .about-paras-container .about-para-container .about-para-container{
+        margin: 5rem auto;
+        padding: 7rem;
+    }
+
+    .about .about-main-container .about-paras-container {
+        margin: 5rem auto;
+        padding: 7rem;
+    }
+
+    .about .about-main-container .about-paras-container .about-para-container{
+        padding: 3rem 7rem;
+        margin: 4rem 0;
+    }
+}
