@@ -1099,7 +1099,7 @@
     display: flex;
     width: 100%;
     margin: 0 auto;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -1109,7 +1109,7 @@
     padding: 3rem 8rem;
     display: flex;
     justify-content: center;
-    flex-basis: 50rem;
+    flex-basis: 40rem;
 }
 
 .sponsership-box .image-box img{
@@ -1156,12 +1156,14 @@
     display: flex;
     justify-content: space-around;
     padding: 10rem 0;
+    flex-wrap: wrap;
 }
 
 .prizes-container .prizes-box{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-basis: 35rem;
 }
 
 .prizes-container .prizes-box .prize-image{

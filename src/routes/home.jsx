@@ -20,6 +20,9 @@ import agri from "../assets/images/doamins/grain-rice-icon.svg";
 import environment from "../assets/images/doamins/trees-icon.svg"
 import nandini from "../assets/images/nandni.png";
 import csi from "../assets/images/csilogo.png";
+import uco from "../assets/images/UCO.png";
+import viswhas from "../assets/images/vishwas.png";
+import pranavasya from "../assets/images/pranavasya.png"
 import first from "../assets/images/1st-prize-icon.svg";
 import second from "../assets/images/2nd-prize-icon.svg";
 import idea from "../assets/images/idea-svgrepo-com2.svg";
@@ -366,10 +369,19 @@ out activities or customs, practices and policies.</p> */}
                         </div>
                         <div className="sponsership-box">
                             <div className="image-box">
-                                <img classname="logo" src={nandini} alt="nandini" />
+                                <img classname="logo" src={csi} alt="csi" />
                             </div>
                             <div className="image-box">
-                                <img classname="logo" src={csi} alt="csi" />
+                                <img classname="logo" src={uco} alt="csi" />
+                            </div>
+                            <div className="image-box">
+                                <img classname="logo" src={viswhas} alt="csi" />
+                            </div>
+                            <div className="image-box">
+                                <img classname="logo" src={pranavasya} alt="csi" />
+                            </div>
+                            <div className="image-box">
+                                <img classname="logo" src={nandini} alt="nandini" />
                             </div>
                         </div>
                     </div>
